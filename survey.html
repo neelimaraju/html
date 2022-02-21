@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Employee Interests Survey Form</h1>
+    <fieldset>
+        <form action="/details.html">
+            
+           <label for="uname">Enter Your Name:</label>
+            <input type="text" id="name" name="name">
+            <br><br>
+             <label for="department">Enter Your Department:</label>
+            <input type="text" id="dept" name="dept">
+            <br><br>
+            <label for="textarea">Tell us a little about youself</label>
+            <textarea rows="6" cols="30"></textarea>
+            <br><br>
+            <label for="exer">Do you exercise at home?</label>
+            <input type="radio" id="r1" name="exer">
+            <label for="r1">Yes</label>
+            <input type="radio" id="r2" name="exer">
+            <label for="r2">No</label>
+            <br><br>
+            <label for="topic">How do you like to read about your favorite topics?</label>
+            <br><br>
+            <input type="checkbox" id="cb1" name="cb1" value="Books">
+            <label for="cb1">Books</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="checkbox" id="cb2" name="cb2" value="onlineResources">
+            <label for="cb2" >Online Resources</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="checkbox" id="cb3" name="cb3" value="Phone Apps">
+            <label for="cb3">Phone Apps</label>&nbsp;&nbsp;&nbsp;
+            <input type="checkbox" id="cb4" name="cb4" value="Magazines">
+            <label for="cb4">Magazines</label>
+            <br><br>
+            What genre of movies do you like?
+            <select name="movieGenre" id="movieGenre">
+                <option></option>
+                <option value="Comedy">Comedy</option>
+                <option value="Romance">Romance</option>
+                <option value="Thriller">Thriller</option>
+                <option value="Horror">Horror</option>
+                <option value="Action">Action</option>
+
+            </select>
+            <br><br>
+            <input type="submit" value="Submit">&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="reset" value=" Reset ">
+
+        </form>
+    </fieldset>
+</body>
+</html>
