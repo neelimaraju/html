@@ -1,13 +1,14 @@
 a{
     text-decoration: none;
-    color: green;
+    color: green
     
 }
-p{
-    background-color:rgb(43, 101, 226)
-    
+h1{
+    text-shadow: 2px 2px rgb(255, 136, 0);
+}
 
-}
 caption{
+    
     text-transform: capitalize;
-}
+
+ }
