@@ -1,7 +1,7 @@
 input { 
     background: lightgray; }
 input:focus {
-     background: greenyellow; }
+     background: rgb(224, 243, 197); }
 legend{
     color: blue;
     font-style: italic;
