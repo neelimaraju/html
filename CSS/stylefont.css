@@ -1,0 +1,28 @@
+input { 
+    background: lightgray; }
+input:focus {
+     background: greenyellow; }
+legend{
+    color: blue;
+    font-style: italic;
+    font-weight: bold;
+    font-size:1em;
+}
+
+.font1{
+    font-variant: small-caps;
+    color:darkgreen;
+    font-weight: bold;
+}
+.font2{
+    font-family:cursive;
+    color:rgba(107, 2, 206, 0.959)
+}
+.font3{
+    color:indigo;
+}
+.font4{
+    color:darkred;
+    font-style:oblique;
+    font-size:medium;
+}
