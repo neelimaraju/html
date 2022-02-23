@@ -26,3 +26,15 @@ legend{
     font-style:oblique;
     font-size:medium;
 }
+.styled {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .styled li {
+    padding-left: 1rem;
+    text-indent: -0.75rem;
+  }
+  .styled li::before {
+    content:  &#128512 ;
+  }
