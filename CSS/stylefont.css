@@ -1,12 +1,12 @@
 input { 
-    background: lightgray; }
+    background: rgb(228, 144, 119); }
 input:focus {
      background: rgb(224, 243, 197); }
 legend{
-    color: blue;
+    color: rgb(255, 0, 0);
     font-style: italic;
     font-weight: bold;
-    font-size:1em;
+    font-size:2em;
 }
 
 .font1{
@@ -38,3 +38,10 @@ legend{
   .styled li::before {
     content:  &#128512 ;
   }
+  .yellow{
+      background-color: rgb(243, 234, 131);
+  }
+  .green{
+    background-color:aquamarine
+  }
+  
