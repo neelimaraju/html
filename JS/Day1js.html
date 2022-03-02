@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:rgb(196, 241, 255);
+            margin:2em;
+        }
+        .grid{
+            display: grid;
+            
+            margin:2px;
+            padding: 2em;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: auto;
+        
+        }
+        button:focus{
+            background-color: rgb(241, 160, 123);
+        }
+        button{
+            
+            width:80px;
+            height: 50px;
+            background-color:rgb(198, 240, 149);
+            border-radius: 50px;
+            font-size:x-large;
+            font-weight: 400;
+            cursor: pointer;
+            
+            
+        }
+        .button:hover {
+                background-color:rgb(182, 170, 112);
+                font-weight: bolder;
+                transition: 0.5s ease-in-out;
+                
+            }
+        input{
+            background-color: rgb(238, 235, 225);
+            width:10em;
+            height:2em ;
+            padding-bottom:5px
+        }
+       
+    </style>
+</head>
+<body>
+    <h1 align="center"> Demontration of JavaScript </h1><br><br>
+  <table>
+        <td> <label for="first" >First Number :</label></td>
+        <td><input type="number" id="first" ></td>
+        <td></td><td></td><td></td><td></td><td></td>
+        <td><label for="sec">Second Number:</label></td>&nbsp;&nbsp;&nbsp;
+        <td><input type="number" id="sec"></td>
+</table>  
+    <div class="grid">
+        
+        <div><button onclick="getSum()" >+</button></div>
+        <div><button onclick="getDiff()" >-</button></div>
+        <div><button onclick="getMul()" >*</button></div>
+        <div><button onclick="getDiv()">/</button></div>
+        <br><br>
+        
+    </div>
+    
+    Result :&nbsp;&nbsp;<input type="text" id="result"><br><br>&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;<button onclick="reset()" >Reset</button><br><br>
+   <script>
+       var a,b,c;
+       function getSum()
+       {
+           
+           a= Number(document.getElementById("first").value);
+           b= Number(document.getElementById("sec").value);
+           c=a+b;
+           document.getElementById("result").value= Sum = c;
+       }
+       function getDiff()
+       {
+           
+           a= Number(document.getElementById("first").value);
+           b= Number(document.getElementById("sec").value);
+           c=a-b;
+           document.getElementById("result").value=c;
+       }
+       function getMul()
+       {
+           
+           a= Number(document.getElementById("first").value);
+           b= Number(document.getElementById("sec").value);
+           c=a*b;
+           document.getElementById("result").value= c;
+       }
+       function getDiv()
+       {
+        a= Number(document.getElementById("first").value);
+           b= Number(document.getElementById("sec").value);
+           c=a/b;
+           document.getElementById("result").value= c; 
+       }
+       function reset()
+       {
+        a= Number(document.getElementById("first").value=null);
+        b= Number(document.getElementById("sec").value=null);
+        c= Number(document.getElementById("result").value=null);
+        
+           
+       }
+   </script>
+</body>
+</html>
