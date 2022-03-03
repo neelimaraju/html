@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 2em;
+            text-align:center;
+            background-color:antiquewhite;
+        }
+        button{
+            width: 80px;
+            height: 30px;
+            border-radius: 5px;
+            background-color:rgb(56, 110, 97);
+            color: aliceblue;
+        }
+
+        label
+        {
+            color: rgb(162, 0, 255);
+            font-style:normal;
+            font-size:x-large;
+        }
+        h1{
+            background-color:rgb(197, 238, 224);
+            color:orangered;
+        }
+        input{
+            margin: 1em;
+            width: 200px;
+            height: 30px;
+            text-align: center;
+            
+        }
+        p{
+            color:blue;
+            font-size: larger;
+        }
+    </style>
+    <script > 
+    var a;
+    var i=1;    
+   
+   
+    function getResult()
+    {
+        
+        a=Number(document.getElementById("num").value);
+         if(a<=0 || a>10)
+         {
+            document.getElementById("num").value="";
+            document.getElementById("output").innerHTML="Invalid Number";
+         }
+         else if (a==7)
+            {
+                document.getElementById("output").innerHTML= "Great!! you took "+i+" attempts to get it right.";
+            }
+            else
+            {
+                ++i;
+                document.getElementById("num").value="";
+                document.getElementById("output").innerHTML="Not Really! Give it another try....";
+            }
+        
+    }   
+        </script>
+</head>
+<body>
+    <h1>Lucky Number Game</h1>
+    <br><br>
+    
+    <table>
+        <td> <label for="luckyNum">Guess my Lucky Number:</label></td>
+        <td><input type="text" id="num" name="type" placeholder="Enter a number from 1 to 10 "></td>
+    </table>
+    <br><br>
+    <button onclick= "getResult()" >Check</button>
+    <p id="output"></p>
+    
+</body>
+
+</html>
