@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            align-items: center;
+            margin:2em;
+            background-color:bisque;
+            color: brown;
+        
+        }
+        h1{
+            text-align: center;
+            text-decoration-line: underline;
+        }
+        label{
+            color:darkmagenta;
+            font-weight:600;
+            margin-left: 3em;
+        }
+        .button
+        {
+            width: 5em;
+            height: 30px;
+            background-color:darkseagreen;
+            color:black;
+            margin:3em;
+            margin-left:8em;
+        
+        }
+        form{
+            margin-left: 3em;
+        }
+    </style>
+</head>
+<body >
+    <h1> Employee Details Form</h1>
+    <form action="/JS/salary.html">
+        
+        <table>
+        <div>
+            <tr>
+               
+            <td><label for="name">Name:</label></td>
+            <td><input type="text" id="ename" name="ename" required></td>
+            </tr>
+        </div>
+            <tr></tr>
+            <tr></tr> 
+        <div>
+            <tr>
+            <td><label for="empid">Emp Id:</label> </td>
+            <td><input type="text" id="eid" name="empid" required>
+            </tr>
+        </div>
+            <tr></tr>
+            <tr></tr> 
+        <div>
+            <tr>
+            <td><label for="empid">Joining Date:</label> </td>
+            <td><input type="date" id="jdid" name="jDate" required>
+            </tr>
+        </div>
+            <tr></tr>
+            <tr></tr> 
+        <div>
+            <tr>
+            <td><label for="empid">Hours Worked:</label> </td>
+            <td><input type="number" id="hwid" name="hWorked" required>
+            </tr>
+        </div>
+            <tr></tr>
+            <tr></tr> 
+        <div>
+            <tr>
+                <td><label for="desig">Designation:</label> </td>
+                  <td><select id = "desig" required>
+                        <option>Select</option>
+                        <option value = "Manager">Manager</option>
+                        <option value = "Consultant">Consultant</option>
+                        <option value = "Trainee">Trainee</option>
+                        </select></td>
+                </tr>
+         </div>
+                <tr></tr>
+                <tr></tr>
+        <div >
+            <tr>
+                <td><button type="submit" class="button" onclick="saveEmpDetails();">Submit</button>
+
+            </tr> 
+        </div>
+        </table>
+    </form>
+    
+
+</body>
+<script >
+    function saveEmpDetails()
+    {
+    
+   const name=document.getElementById("ename").value;
+   const empId=document.getElementById("eid").value;
+   const jDate=document.getElementById("jdid").value;
+   const hWorked=Number(document.getElementById("hwid").value);
+   const desig=document.getElementById("desig").value;
+    
+    const employee={name:"name",employeeId:"empId",joiningDate:"jDate",hoursWorked:"hWorked",designation:"desig"};
+     
+    var salary=0;
+    
+            if(desig=="Manager")
+            {
+                salary = (hWorked*90);
+            }
+            else if(desig=="Consultant")
+            {
+                salary = (hWorked*70);
+            }
+            else if(desig=="Trainee")
+            {
+                salary = (hWorked*45);
+            }
+     var outputMess = name+"  is a "+" "+desig+" "+" and gets Salary "+"$"+salary;
+            localStorage.setItem('salaryByDesig',outputMess);
+    }
+    
+    
+</script>
+</html>
