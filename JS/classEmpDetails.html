@@ -33,8 +33,7 @@
         
         }
         form{
-            margin-left: 5em;
-            margin-top: 5em;
+            margin-left: 3em;
         }
     </style>
 </head>
@@ -101,7 +100,7 @@
 
 </body>
 <script >
-    function saveEmpDetails()
+   function saveEmpDetails()
     {
     
    const name=document.getElementById("ename").value;
@@ -109,8 +108,14 @@
    const jDate=document.getElementById("jdid").value;
    const hWorked=Number(document.getElementById("hwid").value);
    const desig=document.getElementById("desig").value;
+
+   const employee= new Employee();
+   employee.setname=name;
+   employee.setdesignation=designation;
+   employee.sethWorked=hWorked;
+    }
     
-    const employee={name:"name",employeeId:"empId",joiningDate:"jDate",hoursWorked:"hWorked",designation:"desig"};
+   /* const employee={name:"name",employeeId:"empId",joiningDate:"jDate",hoursWorked:"hWorked",designation:"desig"};
      
     var salary=0;
     
@@ -128,8 +133,70 @@
             }
      var outputMess = name+"  is a "+" "+desig+" "+" and gets Salary "+"$"+salary;
             localStorage.setItem('salaryByDesig',outputMess);
+    }*/
+
+    class Employee
+{
+    #name;#hWorked;#designation;
+    constructor(name,hWorked,designation)
+    {
+        this.#name=name;
+        this.#hWorked=hWorked;
+        this.#designation=designation;
+
     }
+
+    get name()
+    {
+        return this.#name
+    }
+    set name(name)
+    {
+         this.#name=name;
+    }
+    get hWorked()
+    {
+        return this.#hWorked;
+    }
+    set hWorked(hWorked)
+    {
+        this.#hWorked=hWorked;
+    }
+    get designation()
+    {
+        return this.#designation;
+    }
+    set designation(designation)
+    {
+        this.#designation=designation;
+    }
+
+    calSalary()
+    {
+    let salary=0;
     
+    if(this.designation=="Manager")
+    {
+        salary = (hWorked*90);
+    }
+    else if(this.designation=="Consultant")
+    {
+        salary = (hWorked*70);
+    }
+    else if(this.designation=="Trainee")
+    {
+        salary = (hWorked*45);
+    }
+
+
+
+    var outputMess = this.#name+"  is a "+" "+this.#designation+" "+" and gets Salary " + "$"+salary;
+    localStorage.setItem('salaryByDesig',outputMess);
+    
+   }
+
+    }
+ 
     
 </script>
 </html>

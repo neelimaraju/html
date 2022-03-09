@@ -1,4 +1,7 @@
 
+body{
+margin-top: 7em;
+}
 .grid{
      display: grid;
      margin:1px;
@@ -61,7 +64,7 @@
     
 }
 #d1{
-    animation-timing-function: linear;
+/*animation-timing-function: linear;
 }
 @keyframes aname{
     from{left:0px;}
