@@ -1,35 +1,35 @@
 let questions = [
     {
     numb: 1,
-    question: "What does HTML stand for?",
-    answer: "Hyper Text Markup Language",
+    question: "Who is making the Web standards?",
+    answer: "The World Wide Web Consortium",
     options: [
-      "Hyper Text Preprocessor",
-      "Hyper Text Markup Language",
-      "Hyper Text Multiple Language",
-      "Hyper Tool Multi Language"
+      "Microsoft",
+      "Mozilla",
+      "The World Wide Web Consortium",
+      "Google"
     ]
   },
     {
     numb: 2,
-    question: "What does CSS stand for?",
-    answer: "Cascading Style Sheet",
+    question: "What is the name of the CSS selector to style the element with id named car?",
+    answer: "#car",
     options: [
-      "Common Style Sheet",
-      "Colorful Style Sheet",
-      "Computer Style Sheet",
-      "Cascading Style Sheet"
+      "$car",
+      "car",
+      ".car",
+      "#car"
     ]
   },
     {
     numb: 3,
-    question: "What does PHP stand for?",
-    answer: "Hypertext Preprocessor",
+    question: "How does a FOR loop start?",
+    answer: "for (i = 0; i <= 5; i++)",
     options: [
-      "Hypertext Preprocessor",
-      "Hypertext Programming",
-      "Hypertext Preprogramming",
-      "Hometext Preprocessor"
+      "for (i = 0; i <= 5; i++)",
+      "for i = 1 to 5",
+      "for (i = 0; i <= 5)",
+      "for (i <= 5; i++)"
     ]
   },
     {
@@ -45,13 +45,13 @@ let questions = [
   },
     {
     numb: 5,
-    question: "What does XML stand for?",
-    answer: "eXtensible Markup Language",
+    question: "How do you make each word in a text start with a capital letter?",
+    answer: "text-transform:capitalize",
     options: [
-      "eXtensible Markup Language",
-      "eXecutable Multiple Language",
-      "eXTra Multi-Program Language",
-      "eXamine Multiple Language"
+      "text-style:capitalize",
+      "You can't do that with CSS",
+      "At the end of the document",
+      "text-transform:capitalize"
     ]
   },
   // you can uncomment the below codes and make duplicate as more as you want to add question
