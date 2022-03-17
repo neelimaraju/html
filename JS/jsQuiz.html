@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+</head>
+<body>
+    <div class="home-box, custom-box hide ">
+        <h3>Instruction:</h3><br>
+        <p>Total number of questions:<span class="total-question">5</span></p><br>
+        <button type="button" class="btn">Start Quiz</button>
+    </div>
+
+    <div class= "quiz-box custom-box ">
+        <div class="question-number">
+            
+        </div>
+        <div class="question-text">
+            
+        </div>
+        <div class="option-container">
+            
+        </div>
+        <div class="next-question-btn">
+            <button type="button" class="btn" onclick="next()">Next</button>
+        </div>
+        <div class="answers-indicator">
+             
+           
+        </div>
+
+    </div>
+    <div class= "result-box custom-box hide">
+        <h1>Quiz Result</h1>
+        <table>
+            <tr>
+                <td>Total Questions</td>
+                <td><span class="total-question">5</span></td>
+            </tr>
+            <tr>
+                <td>Attempt</td>
+                <td><span class="total-attempt">5</span></td>
+            </tr>
+            <tr>
+                <td>Correct</td>
+                <td><span class="total-correct">3</span></td>
+            </tr>
+            <tr>
+                <td>Wrong</td>
+                <td><span class="total-wrong">1</span></td>
+            </tr>
+            <tr>
+                <td>Percentage</td>
+                <td><span class="percentage">60.00%</span></td>
+            </tr>
+            <tr>
+                <td>Your Total Score</td>
+                <td><span class="total-wrong"> 3 / 5</span></td>
+            </tr>
+        </table>
+        <button type="button" class="btn">Try Again</button>
+        <button type="button" class="btn">Go To Home</button>
+    </div>
+
+    <script src="question.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>
